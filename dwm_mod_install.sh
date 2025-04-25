@@ -6,9 +6,9 @@ sudo nala install xorg dmenu xdm thunar alacritty pulseaudio alsamixergui lynx j
 sudo nala install git make gcc libx11-dev libxft-dev libxinerama-dev -y
 git clone https://github.com/bakkeby/dwm-flexipatch.git ~/dwm-flexipatch
 
-# Copy the Patches
-cp ./patches/patches.h ~/dwm-flexipatch/patches.h
-cp ./patches/config.h ~/dwm-flexipatch/config.h
+# Apply Patches
+curl -fsSL https://raw.githubusercontent.com/ChrLos/my_scripts/refs/heads/main/patches/patches.h > ~/dwm-flexipatch/patches.h
+curl -fsSL https://raw.githubusercontent.com/ChrLos/my_scripts/refs/heads/main/patches/config.h > ~/dwm-flexipatch/config.h
 
 # Add dwm session to xdm
 echo "exec dwm" > ~/.xsession
