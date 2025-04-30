@@ -16,6 +16,3 @@ echo "exec dwm" > ~/.xsession
 # Start Compiling
 cd ~/dwm-flexipatch
 sudo make clean install
-
-# Set the Master volume to 100%
-amixer set Master 100%
