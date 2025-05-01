@@ -1393,8 +1393,8 @@ static const Key keys[] = {
 	{ Mod3Mask|Mod1Mask,            XK_period,       floatpos,               {.v = " 1p  1p" } }, // ↘
 	#endif // FLOATPOS_PATCH
 	#if SETBORDERPX_PATCH
-	{ MODKEY|ControlMask,           XK_minus,      setborderpx,            {.i = -1 } },
-	{ MODKEY|ControlMask,           XK_plus,       setborderpx,            {.i = +1 } },
+	{ MODKEY|ShiftMask,           XK_bracketleft,      setborderpx,            {.i = -2 } },
+	{ MODKEY|ShiftMask,           XK_bracketright,       setborderpx,            {.i = +2 } },
 	{ MODKEY|ControlMask,           XK_numbersign, setborderpx,            {.i = 0 } },
 	#endif // SETBORDERPX_PATCH
 	#if CYCLELAYOUTS_PATCH
