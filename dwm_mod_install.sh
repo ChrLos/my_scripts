@@ -16,3 +16,7 @@ echo "exec dwm" > ~/.xsession
 # Start Compiling
 cd ~/dwm-flexipatch
 sudo make clean install
+
+# Change Volume to 100% then Save it
+amixer set Master 100%
+sudo alsactl store
