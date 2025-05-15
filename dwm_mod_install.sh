@@ -16,7 +16,7 @@ curl -fsS https://raw.githubusercontent.com/ChrLos/my_scripts/refs/heads/main/pa
 echo "exec dwm" > ~/.xsession
 
 # Start Compiling
-cd ~/dwm-flexipatch
+cd $dwmflexipatch_path
 sudo make clean install
 
 # Change Volume to 100%, Unmute it then Save it
