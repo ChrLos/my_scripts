@@ -54,6 +54,7 @@ curl -fsSL https://raw.githubusercontent.com/ChrLos/dwm-scripts/refs/heads/main/
 | Shift + Alt + Enter                | Launch Terminal (alacritty)                         | -                 |
 | Alt + Shift + C                    | Close the Program                                   | -                 |
 | Alt + Shift + q                    | Quit dwm WM                                         | -                 |
+| Alt + Space                        | Switch with Last Used Layout                        | -                 |
 
 # dwm Basic Tutorial
 https://dwm.suckless.org/tutorial/
