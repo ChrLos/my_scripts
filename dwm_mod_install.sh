@@ -2,7 +2,7 @@
 dwmflexipatch_path="/tmp/dwm-flexipatch"
 patches_url="https://raw.githubusercontent.com/ChrLos/dwm-scripts/refs/heads/main/patches"
 
-sudo apt install nala -y
+sudo apt install nala curl -y
 sudo nala install xorg dmenu xdm thunar alacritty pulseaudio alsamixergui lynx j4-dmenu-desktop -y
 
 # Required Packages to Compile dwm-flexipatch
@@ -15,6 +15,7 @@ curl -fsSL $patches_url/config.h | sudo tee $dwmflexipatch_path/config.h > /dev/
 
 # Add dwm session to xdm
 echo "exec dwm" > ~/.xsession
+echo "exec dwm" > ~/.xinitrc #Fallback incase .xsession doesn't work
 
 # Start Compiling
 cd $dwmflexipatch_path
