@@ -2,7 +2,7 @@
 dwmflexipatch_path="/tmp/dwm-flexipatch"
 patches_location="./patches"
 
-sudo apt install nala curl -y
+sudo apt install nala -y
 sudo nala install xorg dmenu xdm thunar alacritty pulseaudio alsamixergui lynx j4-dmenu-desktop -y
 
 # Required Packages to Compile dwm-flexipatch
