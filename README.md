@@ -9,6 +9,7 @@ Then run the script you want to run
 # Scripts Description
 ## dwm_scripts
 scripts that installed dwm window manager with a choice of using the patches or not
+
 [More Documentation](dwm_scripts/README.md)
 
 ## auto_network_connect,sh
