@@ -1,4 +1,5 @@
 #!/bin/sh
+
 amixer set Master 100%
 amixer set PCM 100%
 

@@ -1,4 +1,5 @@
 #!/bin/sh
+
 dwmflexipatch_path="/tmp/dwm-flexipatch"
 patches_location="./patches"
 
