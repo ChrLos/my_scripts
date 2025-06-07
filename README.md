@@ -13,4 +13,4 @@ scripts that install dwm window manager with a choice of using the patches or no
 [More Documentation](dwm_scripts/README.md)
 
 ## auto_network_connect,sh
-A script that aims to automatically turn the interface on and use dhcp (mainly for VM after conversion from .vmdk to .qcow2)
+A script that aims to automatically turn the interface on and use dhcp
