@@ -8,7 +8,7 @@ Then run the script you want to run
 
 # Scripts Description
 ## dwm_scripts
-scripts that installed dwm window manager with a choice of using the patches or not
+scripts that install dwm window manager with a choice of using the patches or not
 
 [More Documentation](dwm_scripts/README.md)
 
