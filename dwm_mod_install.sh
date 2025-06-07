@@ -21,11 +21,4 @@ echo "exec dwm" > ~/.xinitrc #Fallback incase .xsession doesn't work
 cd $dwmflexipatch_path
 sudo make clean install
 
-# Change Volume to 100%, Unmute it then Save it
-amixer set Master 100%
-amixer set PCM 100%
-
-amixer set Master unmute
-amixer set PCM unmute
-
-sudo alsactl store
+./set_max_volume.sh
