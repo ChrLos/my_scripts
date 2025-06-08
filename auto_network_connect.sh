@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 interfaces_found=$(ls /sys/class/net/ | grep -v "lo")
 interfaces_qty=$(echo "$interfaces_found" | wc -l)

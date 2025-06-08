@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 amixer set Master 100%
 amixer set PCM 100%
