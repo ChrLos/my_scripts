@@ -11,7 +11,7 @@ if [ -z "$interfaces_found" ]; then
 fi
 
 if [ $interfaces_qty -gt 1 ]; then
-    read -p "Type your interface name" interfaces_found
+    read -p "Type your interface name: " interfaces_found
 fi
 
 echo "" | sudo tee -a $network_interface_location > /dev/null
