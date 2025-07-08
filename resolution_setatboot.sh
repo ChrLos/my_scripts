@@ -1,14 +1,41 @@
 #!/bin/bash
 
-if [ $(grep -cE "xrandr --output .* --mode .*" ~/.xsession) -gt 0 ] || [ $(grep -cE "xrandr --output .* --mode .*" ~/.xinitrc) -gt 0 ]; then
-    echo "Settings already exist"
-    exit 1
-fi
+delete_prev_settings() {
+	sed -i "/xrandr --output .* --mode .*/Id" ~/.xsession
+	sed -i "/xrandr --output .* --mode .*/Id" ~/.xinitrc
+}
 
-read -p "Type Your Display Name: " display_name
-read -p "Type Your Desired Resolution: " resolution
+change_settings() {
+	clear
 
-resolution_command="xrandr --output $display_name --mode $resolution"
+	echo "Choose From The Following Display and Resolution:"
+	
+	echo
+	xrandr -q
+	echo
 
-sed -i "1i$resolution_command" ~/.xsession
-sed -i "1i$resolution_command" ~/.xinitrc #Fallback incase .xsession doesn't work
+	read -p "Type Your Display Name: " display_name
+	read -p "Type Your Desired Resolution: " resolution
+
+	resolution_command="xrandr --output $display_name --mode $resolution"
+
+	sed -i "1i$resolution_command" ~/.xsession
+	sed -i "1i$resolution_command" ~/.xinitrc #Fallback incase .xsession doesn't work
+}
+
+check_settings() {
+	if [ $(grep -cE "xrandr --output .* --mode .*" ~/.xsession) -gt 0 ] || [ $(grep -cE "xrandr --output .* --mode .*" ~/.xinitrc) -gt 0 ]; then
+		echo "Settings already exist"
+		read -p "Do you want to change it? (y/n): " user_answer 
+
+		if [ "$user_answer" == "y" ]; then
+			delete_prev_settings	
+			change_settings
+		fi
+
+		exit
+	fi
+}
+
+check_settings
+change_settings
